@@ -25,16 +25,16 @@ export function Nav() {
           <Image
             src="/logo.png"
             alt="Abdullah Khan"
-            width={48}
+            width={61}
             height={36}
-            className="h-9 w-auto object-contain invert"
+            className="h-9 w-auto object-contain"
             priority
           />
           <span className="text-[14px] font-medium tracking-[-0.01em]">Abdullah Khan</span>
         </Link>
 
         <div className="hidden items-center gap-7 text-[13px] text-white/62 md:flex">
-          {["Work", "Projects", "Stack", "Contact"].map((item) => (
+          {["Work", "Projects", "Stack", "Feedback", "Contact"].map((item) => (
             <a
               key={item}
               href={`#${item.toLowerCase()}`}

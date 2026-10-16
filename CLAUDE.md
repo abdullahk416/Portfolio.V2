@@ -32,7 +32,7 @@ Portfolio/
 │   ├── Hero.tsx            ← animated landing with grid bg, mouse gradient, click ripples
 │   ├── LogoMarquee.tsx     ← uses LogoCloud for tech-stack icon row
 │   ├── About.tsx           ← "Designed for clarity. Built for scale." + RadialOrbitalTimeline
-│   ├── Experience.tsx      ← Norsco / Brand Love / Wouessi cards
+│   ├── Experience.tsx      ← Safran / EMA / Pharma 360 / Brand Love / Wouessi cards
 │   ├── Projects.tsx        ← HealthCare / S&P Predictor / AI Therapist cards
 │   ├── Stack.tsx           ← BentoGrid showing the full stack
 │   ├── Feedback.tsx        ← Tara McIlroy testimonial

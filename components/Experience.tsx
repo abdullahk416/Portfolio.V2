@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { HolographicCard } from "@/components/ui/holographic-card";
+import { cn } from "@/lib/utils";
 
 interface Experience {
   company: string;
@@ -7,22 +8,42 @@ interface Experience {
   year: string;
   description: string;
   tags: string[];
-  logo: string;
+  logo?: string;
+  featured?: boolean;
 }
 
 const experiences: Experience[] = [
   {
-    company: "Norsco Consulting",
-    role: "Full-Stack Developer",
+    company: "Safran Landing Systems",
+    role: "Software Developer Co-op",
+    year: "'26 – Now",
+    description:
+      "Desktop and web apps on the Microsoft stack in C# and ASP.NET with React and Vue front ends, plus SQL Server (SSIS/SSRS), Power BI reports, and SharePoint workflows in Nintex.",
+    tags: ["C#", "ASP.NET", "SQL Server", "Power BI", "PowerShell"],
+    logo: "/safran.jpeg",
+    featured: true,
+  },
+  {
+    company: "EMA Nonprofit Technologies",
+    role: "Software Engineer Intern",
     year: "'26",
     description:
-      "Real-time admin dashboard for EMA Fintech in C#, ASP.NET Core, and Blazor — visualizing live donation data for a Canadian nonprofit SaaS.",
-    tags: ["C#", "Blazor", "SQL Server", "Chart.js"],
-    logo: "/norsco.png",
+      "Full-stack features for a Canadian fintech donation platform, including a real-time Blazor admin dashboard that turns live SQL Server data into Chart.js visuals.",
+    tags: ["C#", "Blazor", "SQL Server", "Azure"],
+    logo: "/ema.png",
+  },
+  {
+    company: "Pharma 360 Solutions",
+    role: "Software Engineer Intern",
+    year: "'26",
+    description:
+      "Real-time service health dashboard in React showing per-service success and failure rates from live backend data for a pharmaceutical operations platform.",
+    tags: ["React", "JavaScript", "Real-time", "Data viz"],
+    logo: "/pharma360.jpg",
   },
   {
     company: "Brand Love Inc.",
-    role: "Full-Stack & UX Lead",
+    role: "Full-Stack Developer",
     year: "'26",
     description:
       "Built ContinuityOS — an executive dashboard aggregating ClickUp, Vapi, and Apollo, with an LLM that translates metrics into plain-English insights.",
@@ -48,19 +69,34 @@ function Pill({ children }: { children: React.ReactNode }) {
   );
 }
 
-function SectionCard({ company, role, year, description, tags, logo }: Experience) {
+function initials(name: string) {
+  return name.split(" ").slice(0, 2).map((w) => w[0]).join("");
+}
+
+function SectionCard({ company, role, year, description, tags, logo, featured }: Experience) {
   return (
-    <HolographicCard className="group rounded-xl border border-white/10 bg-white/[0.03] p-[22px]">
+    <HolographicCard
+      className={cn(
+        "group rounded-xl border border-white/10 bg-white/[0.03] p-[22px]",
+        featured && "md:col-span-2"
+      )}
+    >
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-2.5">
           <div className="flex h-8 w-8 items-center justify-center overflow-hidden rounded-md border border-white/10 bg-white/[0.06]">
-            <Image
-              src={logo}
-              alt={`${company} logo`}
-              width={32}
-              height={32}
-              className="h-full w-full object-cover"
-            />
+            {logo ? (
+              <Image
+                src={logo}
+                alt={`${company} logo`}
+                width={32}
+                height={32}
+                className="h-full w-full object-cover"
+              />
+            ) : (
+              <span aria-hidden="true" className="text-[11px] font-medium text-white/80">
+                {initials(company)}
+              </span>
+            )}
           </div>
           <span className="text-[12px] text-white">{company}</span>
         </div>

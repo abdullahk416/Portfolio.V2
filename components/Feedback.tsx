@@ -3,7 +3,7 @@ import { HolographicCard } from "@/components/ui/holographic-card";
 
 export function Feedback() {
   return (
-    <section className="relative" id="highlights">
+    <section className="relative" id="feedback">
       <div className="mx-auto max-w-7xl px-6 py-[120px] lg:px-12">
         <div className="mx-auto max-w-[640px] text-center">
           <div className="flex items-center justify-center gap-3 text-sm text-white/62">
@@ -24,7 +24,7 @@ export function Feedback() {
           </h2>
         </div>
 
-        <div className="mt-14 mx-auto grid max-w-6xl gap-3 md:grid-cols-3 md:items-stretch">
+        <div className="mt-14 mx-auto grid max-w-6xl gap-3 md:grid-cols-2 md:items-stretch">
           <HolographicCard className="h-full rounded-xl border border-white/10 bg-white/[0.03] p-8">
             <div className="flex h-full flex-col">
               <span className="mb-5 block font-serif text-5xl leading-none text-white/30">&ldquo;</span>
@@ -97,6 +97,30 @@ export function Feedback() {
                 <div>
                   <div className="text-[13px] font-medium text-white">Robert Boutros</div>
                   <div className="text-[12px] text-white/50">Director · Pharma 360</div>
+                </div>
+              </div>
+            </div>
+          </HolographicCard>
+          <HolographicCard className="h-full rounded-xl border border-white/10 bg-white/[0.03] p-8">
+            <div className="flex h-full flex-col">
+              <span className="mb-5 block font-serif text-5xl leading-none text-white/30">&ldquo;</span>
+              <p className="text-[17px] leading-[1.75] text-white/78">
+                Abdullah is a very talented developer. He not only completed his assignments very
+                quickly, but introduced new concepts along the way. I&rsquo;m hoping to hire him
+                again soon.
+              </p>
+              <span className="mt-2 block text-right font-serif text-5xl leading-none text-white/30">&rdquo;</span>
+              <div className="mt-auto flex items-center gap-4 border-t border-white/10 pt-6">
+                <Image
+                  src="/roger-osness.jpg"
+                  alt="Rodger Osness"
+                  width={40}
+                  height={40}
+                  className="h-10 w-10 rounded-full object-cover"
+                />
+                <div>
+                  <div className="text-[13px] font-medium text-white">Rodger Osness</div>
+                  <div className="text-[12px] text-white/50">Founder &amp; Architect</div>
                 </div>
               </div>
             </div>

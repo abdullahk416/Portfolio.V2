@@ -15,7 +15,7 @@ export function CTA() {
               lineHeight: 1.0,
             }}
           >
-            Let&apos;s build something.
+            Let&apos;s Connect
           </h2>
           <p className="mt-5 max-w-[480px] mx-auto text-[15px] leading-[1.7] text-white/62">
             Open to internships, contract work, and ambitious side projects. Fastest reply is by email.

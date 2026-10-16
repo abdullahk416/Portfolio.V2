@@ -9,9 +9,9 @@ export function Footer() {
           <Image
             src="/logo.png"
             alt="Abdullah Khan"
-            width={36}
+            width={38}
             height={22}
-            className="h-[22px] w-auto object-contain invert opacity-60"
+            className="h-[22px] w-auto object-contain opacity-60"
           />
           <span>© 2026 Abdullah Khan</span>
           <span className="text-white/20">·</span>

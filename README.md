@@ -49,7 +49,7 @@ Portfolio/
 │   ├── Hero.tsx                 # Animated landing
 │   ├── LogoMarquee.tsx          # Tech-stack carousel
 │   ├── About.tsx                # Built-with-intent + orbital timeline
-│   ├── Experience.tsx           # Norsco / Brand Love / Wouessi cards
+│   ├── Experience.tsx           # Safran / EMA / Pharma 360 / Brand Love / Wouessi cards
 │   ├── Projects.tsx             # 3 personal project cards
 │   ├── Stack.tsx                # Bento grid of full stack
 │   ├── Feedback.tsx             # Tara McIlroy testimonial
